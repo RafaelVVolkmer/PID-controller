@@ -237,7 +237,7 @@ static int PIDController_initFilter(filter_t *filter);
   @return   The filtered average value on success.
             -EINVAL if the `filter` pointer is `NULL`.
  =========================================================================== **/
-float PIDController_filterMovingAverage(filter_t *filter, float value);
+float PIDController_filterMovingAverage(filter_t *filter, float new_value);
 
 #endif /* PIDCONTROLLER_H_ */
 
