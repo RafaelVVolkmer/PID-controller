@@ -46,7 +46,7 @@
 #include <errno.h>
 
 /*< Implemented >*/
-#include "PIDContoller.h
+#include "PIDContoller.h"
 
 /* ==================================== *\
  *            PRIVATE DEFINES           *
@@ -197,6 +197,7 @@ static float PIDController_getOut(pid_controller_t *pid, float setpoint, float m
                             DOUBLE_CONST * kd * (measure - pid->prev_measure)
                         );           
     denominator = (float)(DOUBLE_CONST * tau + t);
+    
     pid->differentiator = (float)(numerator / denominator);
 
     /*< Compute Total Output >*/
