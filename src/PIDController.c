@@ -280,7 +280,7 @@ end_of_function:
   @return   The filtered average value on success.
             -EINVAL if the `filter` pointer is `NULL`.
  =========================================================================== **/
-float PIDController_filterMovingAverage(filter_t *filter, float value)
+float PIDController_filterMovingAverage(filter_t *filter, float new_value)
 {
     /*< Variable Declarations >*/
     float ret = 0.0f; /*< Return Control >*/
